@@ -40,10 +40,21 @@ class FusionEKF {
 
   // tool object used to compute Jacobian and RMSE
   Tools tools;
+  
+  // laser measurement noise
   Eigen::MatrixXd R_laser_;
+  
+  // radar measurement noise
   Eigen::MatrixXd R_radar_;
+  
+  // measurement function for laser
   Eigen::MatrixXd H_laser_;
+  
+  // measurement function for radar
   Eigen::MatrixXd Hj_;
+  
+  float noise_ax;
+  float noise_ay;
 };
 
 #endif // FusionEKF_H_
